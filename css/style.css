@@ -8,6 +8,7 @@
   --accent-background-color: #2f303a;
   --border-color: #eeeeee;
   --secondery-border-color: #ececec;
+  --icons-border-color: #afb1b8;
 }
 
 h1,
@@ -71,7 +72,6 @@ body {
 }
 .flex {
   display: flex;
-
 }
 
 .logo {
@@ -121,11 +121,26 @@ body {
 }
 
 .header-nav-contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .logo-first,
@@ -148,6 +163,11 @@ body {
   padding-bottom: 200px;
 
   background-color: var(--accent-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-image.jpg);
 }
 
 .hiro-title {
@@ -221,7 +241,7 @@ body {
 }
 
 .skills-section-list li::before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 120px;
@@ -229,7 +249,6 @@ body {
   background-color: var(--secondery-white-color);
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .item-antenna::before {
@@ -242,11 +261,10 @@ body {
 
 .item-astronaut::before {
   background-image: url(../images/astronaut\ 1.png);
-
 }
 
 .item-diagram::before {
-  background-image: url(../images/diagram\ 1.png);
+  background-image: url(../images/icons.svg#icon-diagram);
 }
 
 .skills-section-list p {
@@ -284,8 +302,9 @@ body {
   gap: 30px;
 }
 
-.team-list li {
+.team-list > li {
   width: calc((100% - 90px) / 4);
+  padding-bottom: 30px;
   background-color: var(--primary-white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -316,12 +335,88 @@ body {
   letter-spacing: 0.03em;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primary-text-color);
+}
+
+.footer .social-links a {
+  background-color: rgba(255, 255, 255, 10%);
+  color: var(--primary-white-color);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.social-link-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 /* -----------------------regular-customers-section--------------- */
 
-.regular-customers-section .container {
-display: flex;
-justify-content: center;
+.regular-customers-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
+.regular-customers-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.regular-customers-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.1666;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.regular-customer-list {
+  gap: 30px;
+}
+
+.regular-customer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-border-color);
+  border-radius: 4px;
+  color: var(--icons-border-color);
+}
+
+.regular-customer-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.regular-customer-link:hover,
+.regular-customer-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.
 /* -------------------------portfolio-section--------------------- */
 
 .portfolio {
@@ -406,6 +501,10 @@ justify-content: center;
   padding-bottom: 60px;
   width: 100%;
 }
+
+.footer .container {
+  gap: 70px;
+}
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -439,4 +538,19 @@ justify-content: center;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.social-container {
+  padding-top: 12px;
+  color: var(--primary-white-color);
+}
+
+.social-container-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
