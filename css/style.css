@@ -248,6 +248,7 @@ body {
   width: 100%;
   height: 120px;
   margin-bottom: 30px;
+  border-radius: 4px;
   background-color: var(--secondery-white-color);
   background-repeat: no-repeat;
   background-position: 100px 25px;
@@ -255,18 +256,22 @@ body {
 
 .item-antenna::before {
   background-image: url(../images/icons.svg#icon-antenna);
+  background-size: 70px;
 }
 
 .item-clock::before {
   background-image: url(../images/icons.svg#icon-clock);
+  background-size: 70px;
 }
 
 .item-astronaut::before {
   background-image: url(../images/icons.svg#icon-diagram);
+  background-size: 70px;
 }
 
 .item-diagram::before {
   background-image: url(../images/icons.svg#icon-astronaut);
+  background-size: 70px;
 }
 
 .skills-section-list p {
@@ -306,7 +311,6 @@ body {
 
 .team-list > li {
   width: calc((100% - 90px) / 4);
-  padding-bottom: 30px;
   background-color: var(--primary-white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -331,6 +335,7 @@ body {
 }
 .team-text {
   text-align: center;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.18;
@@ -349,7 +354,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--primary-text-color);
+  color: var(--icons-border-color);
 }
 
 .footer .social-links a {
